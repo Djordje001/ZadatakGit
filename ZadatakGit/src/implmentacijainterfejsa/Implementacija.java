@@ -1,26 +1,35 @@
 package implmentacijainterfejsa;
 
+import java.util.List;
+
 import interfejspaket.Interfejs;
 import magacin.Artikal;
 
 public class Implementacija implements Interfejs {
-
+   private List<Artikal> artikli;
 	@Override
 	public void dodaj(Artikal artikal) {
-		if(true) return;
-		System.out.println("hahahaha");
+
+		if(artikal!=null && !artikli.contains(artikal)) artikli.add(artikal);
+
 		
 	}
 
 	@Override
 	public void izbaci(Artikal artikal) {
-		// TODO Auto-generated method stub
+		if(artikal!=null && artikli.contains(artikal)) artikli.remove(artikal);
 		
 	}
 
 	@Override
 	public Artikal pronadji(int sifra) {
-		// TODO Auto-generated method stub
+		Artikal artikal=new Artikal();
+		artikal.setSifra(sifra);
+		for(int i=0;i<artikli.size();i++) {
+			if(artikli.get(i).equals(artikal)) {
+				return artikal;
+			}
+		}
 		return null;
 	}
 

@@ -7,7 +7,8 @@ public class Implementacija implements Interfejs {
 
 	@Override
 	public void dodaj(Artikal artikal) {
-		// TODO Auto-generated method stub
+		if(true) return;
+		System.out.println("hahahaha");
 		
 	}
 

@@ -9,18 +9,25 @@ public String getNaziv() {
 	return naziv;
 }
 public void setNaziv(String naziv) {
+	if(naziv.equals("") || naziv==null) {
+		return;
+	}
 	this.naziv = naziv;
 }
 public int getSifra() {
 	return sifra;
 }
 public void setSifra(int sifra) {
+	
 	this.sifra = sifra;
 }
 public String getOpis() {
 	return opis;
 }
 public void setOpis(String opis) {
+	if(opis.equals("") || opis==null) {
+		return;
+	}
 	this.opis = opis;
 }
 public int getKolicina() {
